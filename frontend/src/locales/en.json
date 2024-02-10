@@ -1,0 +1,9 @@
+{
+  "meta": {
+    "title": "ThriftTrack",
+    "description": "Money management made easy"
+  },
+  "common": {
+    "hello_message": "Hello there, {name}!"
+  }
+}
