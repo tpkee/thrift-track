@@ -35,25 +35,21 @@ export default function Button(props: Props) {
   const t = useTranslations("common");
 
   return (
-    <>
-      <button
-        {...attributes}
-        className={className}
-        aria-disabled={disabled || loading}
-        disabled={disabled || loading}
-      >
-        {!loading || (
-          <>
-            <IconSpinner className="motion-reduce:hidden absolute mx-auto text-center left-0 top-auto align-middle w-full h-6 fill-gray-900 animate-spin" />
-            <span className="capitalize sr-only motion-reduce:not-sr-only">
-              {t("loading")}...
-            </span>
-          </>
-        )}
-        <span className={loading ? "opacity-0" : "opacity-100"}>
-          {children}
-        </span>
-      </button>
-    </>
+    <button
+      {...attributes}
+      className={className}
+      aria-disabled={disabled || loading}
+      disabled={disabled || loading}
+    >
+      {!loading || (
+        <>
+          <IconSpinner className="motion-reduce:hidden absolute mx-auto text-center left-0 top-auto align-middle w-full h-6 fill-gray-900 animate-spin" />
+          <span className="capitalize sr-only motion-reduce:not-sr-only">
+            {t("loading")}...
+          </span>
+        </>
+      )}
+      <span className={loading ? "opacity-0" : "opacity-100"}>{children}</span>
+    </button>
   );
 }
