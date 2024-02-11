@@ -12,10 +12,10 @@ module.exports = {
           },
         ],
       },
-      boxShadow: ({ theme }: any) => ({
+      boxShadow: {
         "custom-primary": `inset 2px 2px rgba(0, 0, 0, 1), inset -2px -2px rgba(0, 0, 0, 1), 3px 3px rgba(0, 0, 0, 1)`,
         "custom-secondary": `inset 2px 2px rgba(0, 0, 0, 1), inset -2px -2px rgba(0, 0, 0, 1), 0px 0px rgba(0, 0, 0, 1)`,
-      }),
+      },
       colors: {
         transparent: "transparent",
         current: "currentColor",

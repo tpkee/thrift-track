@@ -4,6 +4,7 @@
     "description": "Money management made easy"
   },
   "common": {
+    "loading": "Loading",
     "hello_message": "Hello there, {name}!"
   }
 }
