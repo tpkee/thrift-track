@@ -20,16 +20,17 @@ export default function Button(props: Props) {
 
   const className = `
   relative
-  py-2.5 px-6
+  py-3 px-6
   shadow-custom-primary 
   transition duration-200 ease-in-out
-  bg-hedonist-600 text-white
+  bg-hedonist-500 text-white
   shadow-gray-900
-  hover:bg-hedonist-500
+  hover:bg-hedonist-600
   active:shadow-custom-secondary
   disabled:pointer-events-none
   ${loading || "disabled:opacity-60"}
   text-center
+  text-sm
 `;
 
   const t = useTranslations("common");
