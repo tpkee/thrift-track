@@ -1,32 +1,32 @@
-import '@/css/global.css';
+import "@/css/global.css";
 
-import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import { NextIntlClientProvider, useMessages } from 'next-intl';
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { NextIntlClientProvider, useMessages } from "next-intl";
 
-import { AppConfig } from '@/utils/AppConfig';
+import { AppConfig } from "@/utils/AppConfig";
 
 export const metadata: Metadata = {
   icons: [
     {
-      rel: 'apple-touch-icon',
-      url: '/apple-touch-icon.png',
+      rel: "apple-touch-icon",
+      url: "/apple-touch-icon.png",
     },
     {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '32x32',
-      url: '/favicon-32x32.png',
+      rel: "icon",
+      type: "image/png",
+      sizes: "32x32",
+      url: "/favicon-32x32.png",
     },
     {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '16x16',
-      url: '/favicon-16x16.png',
+      rel: "icon",
+      type: "image/png",
+      sizes: "16x16",
+      url: "/favicon-16x16.png",
     },
     {
-      rel: 'icon',
-      url: '/favicon.ico',
+      rel: "icon",
+      url: "/favicon.ico",
     },
   ],
 };
@@ -43,7 +43,7 @@ export default function RootLayout(props: {
 
   return (
     <html lang={props.params.locale}>
-      <body>
+      <body className="bg-white text-gray-900">
         <NextIntlClientProvider
           locale={props.params.locale}
           messages={messages}
@@ -55,4 +55,4 @@ export default function RootLayout(props: {
   );
 }
 
-export const runtime = 'edge';
+export const runtime = "edge";
